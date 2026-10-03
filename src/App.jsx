@@ -1,18 +1,19 @@
-import Product from "./components/Product";
-import ProductDetails from "./components/ProductDetails";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Profile from "./components/Profile";
+import { AuthProvider } from "./context/AuthContext";
 
-import { ProductProvider } from "./context/ProductContext";
 
 function App() {
   
   return (
-    <ProductProvider>
-          <h1>Product Management</h1>
-          <Product/>
-          <ProductDetails/>
-    </ProductProvider>
+    <AuthProvider>
+      <Header/>
+      <Home/>
+      <Profile/>
+    </AuthProvider>
   
-  )
+  );
 }
 
 export default App
